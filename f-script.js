@@ -1,11 +1,12 @@
-const carousel = document.querySelector('.carousel');
+let carousel = document.querySelector('.carousel');
 let currentIndex = 0;
 isMobile();
+addToCarousel();
 
 
 function handleScroll(event) {
  
-  const deltaY = event.deltaY;
+  let deltaY = event.deltaY;
   let scrollDirection;
   
   if (deltaY > 0) {
@@ -24,7 +25,7 @@ function handleScroll(event) {
     currentIndex = carousel.children.length - 1;
   }
 
-  const scrollLeft = currentIndex * carousel.offsetWidth;
+  let scrollLeft = currentIndex * carousel.offsetWidth;
   carousel.scrollTo({ left: scrollLeft });
 
   carousel.style.cursor = 'auto';
@@ -35,12 +36,12 @@ function handleScroll(event) {
 }
 
 function handleImageClick() {
-  const maxIndex = carousel.children.length - 1;
+  let maxIndex = carousel.children.length - 1;
   if (currentIndex === maxIndex) {
-    carousel.innerHTML = `<img src="images/illustration/FISH11.png" alt="Fish Image">`;
+    carousel.innerHTML = `<img src="fish/images/illustration/FISH11.png" alt="Fish Image">`;
     startRedirectTimer();
   
-    carousel.style.cursor = 'auto';s
+    carousel.style.cursor = 'auto';
   }
 }
 
@@ -57,7 +58,7 @@ function handleMouseOver() {
 function startRedirectTimer() {
   setTimeout(() => {
   
-    window.location.href = 'file:///D:/1PROJEKT/portfolio.html';
+    window.location.href = 'portfolio.html';
   }, 3000);
 }
 
@@ -74,6 +75,20 @@ function isMobile() {
       window.location.href = 'file:///D:/1PROJEKT/portfolio.html';
   }
 }
+
+function addToCarousel() {
+  const path = "FISH/images/illustration/";
+  const imagesNum = 10;
+
+  for (let i = 1; i <= imagesNum; i++) {
+     imgElement = document.createElement("img");
+    imgElement.src = `${path}FISH${i}.png`;
+    carousel.appendChild(imgElement);
+  }
+}
+
+
+
 
 
 

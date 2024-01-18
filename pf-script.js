@@ -118,9 +118,7 @@ function setActiveButton(button) {
 
 function showAbout() {
     gallery.innerHTML = `
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I'm Ben Ash, a passionate artist with a love for sketching and illustration. I find inspiration in the world around me and strive to bring creativity to life through my artwork.</p>
-        <p>My journey in the art world has been filled with exploration and a constant quest for improvement. Each piece I create tells a unique story, and I hope you enjoy exploring my portfolio.</p>
+        <h2>Just a guy who LOVES drawing and pating from Czech Republic</h2>
     `;
 }
 function showContact() {
@@ -128,7 +126,7 @@ function showContact() {
         <div class="contact-info">
             <p>Feel free to reach out to me via my email or social media:</p>
             <ul>
-                <li>Email: ben.ash@example.com</li>
+                <li>Email: vladimir.benes98@gmail.com</li>
             </ul>
         </div>
     `;
